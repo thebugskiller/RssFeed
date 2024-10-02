@@ -19,11 +19,11 @@ class RssCache(models.Model):
         optional.
         updated_at (datetime): The timestamp when the entry was last updated.
     """
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=256)
     link = models.URLField()
     description = models.TextField()
     pub_date = models.DateTimeField()
-    creator = models.CharField(max_length=100, null=True, blank=True)
+    creator = models.CharField(max_length=256, null=True, blank=True)
     image_url = models.URLField(null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -43,10 +43,10 @@ class RssCacheEsp(models.Model):
         optional.
         updated_at (datetime): The timestamp when the entry was last updated.
     """
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=256)
     link = models.URLField()
     description = models.TextField()
     pub_date = models.DateTimeField()
-    creator = models.CharField(max_length=100, null=True, blank=True)
+    creator = models.CharField(max_length=256, null=True, blank=True)
     image_url = models.URLField(null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
