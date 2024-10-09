@@ -23,7 +23,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_celery_beat',
     'django_crontab',
+    'api',
     'rssfeed',
+    'genes'
 ]
 
 REST_FRAMEWORK = {
@@ -80,11 +82,11 @@ CACHES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRES_DB', 'rssfeeddb'),
-        'USER': os.environ.get('POSTGRES_USER', 'rssfeeduser'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'rssfeedpassword'),
+        'NAME': os.environ.get('POSTGRES_DB', 'TestDB'),
+        'USER': os.environ.get('POSTGRES_USER', 'postgres'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'password'),
         'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
-        'PORT': '5432',
+        'PORT': '5433',
     }
 }
 
